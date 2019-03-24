@@ -1,0 +1,82 @@
+{
+  "name": "Turkish Data",
+  "description": "Turkish data supplier plugin.",
+  "appcast": "https://raw.githubusercontent.com/ozgurgunes/Sketch-Turkish-Data/master/.appcast.xml",
+  "identifier": "com.gunesozgur.sketch.turkish-data",
+  "homepage": "https://github.com/ozgurgunes/Sketch-Turkish-Data",
+  "author": "Özgür Güneş",
+  "authorEmail": "o.gunes@gmail.com",
+  "compatibleVersion": 3,
+  "bundleVersion": 1,
+  "icon": "icon.png",
+  "suppliesData": true,
+  "commands": [
+    {
+      "script": "provider.js",
+      "handlers": {
+        "actions": {
+          "Startup": "onStartup",
+          "Shutdown": "onShutdown",
+          
+          "AllFirstNames": "supplyAllFirstNames",
+          "MaleFirstNames": "supplyMaleFirstNames",
+          "FemaleFirstNames": "supplyFemaleFirstNames",
+          "RandomAllFirstNames": "supplyRandomAllFirstNames",
+          "RandomMaleFirstNames": "supplyRandomMaleFirstNames",
+          "RandomFemaleFirstNames": "supplyRandomFemaleFirstNames",
+
+          "AllFullNames": "supplyAllFullNames",
+          "MaleFullNames": "supplyMaleFullNames",
+          "FemaleFullNames": "supplyFemaleFullNames",
+          "RandomAllFullNames": "supplyRandomAllFullNames",
+          "RandomMaleFullNames": "supplyRandomMaleFullNames",
+          "RandomFemaleFullNames": "supplyRandomFemaleFullNames",
+
+          "AllLastFirst": "supplyAllLastFirst",
+          "MaleLastFirst": "supplyMaleLastFirst",
+          "FemaleLastFirst": "supplyFemaleLastFirst",
+          "RandomAllLastFirst": "supplyRandomAllLastFirst",
+          "RandomMaleLastFirst": "supplyRandomMaleLastFirst",
+          "RandomFemaleLastFirst": "supplyRandomFemaleLastFirst",
+
+          "Cities": "supplyCities",
+          "DistrictsOfAnkara": "supplyDistrictsOfAnkara",
+          "DistrictsOfIstanbul": "supplyDistrictsOfIstanbul",
+          "RandomCities": "supplyRandomCities",
+          "RandomDistrictsOfAnkara": "supplyRandomDistrictsOfAnkara",
+          "RandomDistrictsOfIstanbul": "supplyRandomDistrictsOfIstanbul",
+
+          "BusinessTitle": "supplyBusinessTitle",
+          "CompanyName": "supplyCompanyName",
+          "IndustryTitle": "supplyIndustryTitle",
+          "ShopName": "supplyShopName",
+          "RandomBusinessTitle": "supplyRandomBusinessTitle",
+          "RandomCompanyName": "supplyRandomCompanyName",
+          "RandomIndustryTitle": "supplyRandomIndustryTitle",
+          "RandomShopName": "supplyRandomShopName",
+          
+          "DateDdMmYY": "supplyDateDdMmYY",
+          "DateDdMmYyyy": "supplyDateDdMmYyyy",
+          "DateDdMmmYyyy": "supplyDateDdMmmYyyy",
+          "DateDdMmmmYyyy": "supplyDateDdMmmmYyyy",
+          "DateDdMmmmYyyyDddd": "supplyDateDdMmmmYyyyDddd",
+          "DateDdMmYyHhMm": "supplyDateDdMmYyHhMm",
+          "DateDdMmYyyyHhMm": "supplyDateDdMmYyyyHhMm",
+          "DateDdMmmmYyyyDdddHhMm": "supplyDateDdMmmmYyyyDdddHhMm",
+          "RandomDateDdMmYY": "supplyRandomDateDdMmYY",
+          "RandomDateDdMmYyyy": "supplyRandomDateDdMmYyyy",
+          "RandomDateDdMmmYyyy": "supplyRandomDateDdMmmYyyy",
+          "RandomDateDdMmmmYyyy": "supplyRandomDateDdMmmmYyyy",
+          "RandomDateDdMmmmYyyyDddd": "supplyRandomDateDdMmmmYyyyDddd",
+          "RandomDateDdMmYyHhMm": "supplyRandomDateDdMmYyHhMm",
+          "RandomDateDdMmYyyyHhMm": "supplyRandomDateDdMmYyyyHhMm",
+          "RandomDateDdMmmmYyyyDdddHhMm": "supplyRandomDateDdMmmmYyyyDdddHhMm"
+
+        }
+      }
+    }
+  ],
+  "menu": {
+    "title": "Turkish Data"
+  }
+}

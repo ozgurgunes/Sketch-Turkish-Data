@@ -1,0 +1,23 @@
+export default
+[
+  'Mehmet',
+  'Mustafa',
+  'Ahmet',
+  'Ali',
+  'Hüseyin',
+  'Hasan',
+  'İbrahim',
+  'İsmail',
+  'Osman',
+  'Yusuf',
+  'Murat',
+  'Ömer',
+  'Ramazan',
+  'Halil',
+  'Süleyman',
+  'Abdullah',
+  'Mahmut',
+  'Recep',
+  'Salih',
+  'Fatih'
+]

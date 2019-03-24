@@ -1,0 +1,23 @@
+export default
+[
+  'Fatma',
+  'Ayşe',
+  'Emine',
+  'Hatice',
+  'Zeynep',
+  'Elif',
+  'Meryem',
+  'Şerife',
+  'Sultan',
+  'Zehra',
+  'Hanife',
+  'Merve',
+  'Havva',
+  'Zeliha',
+  'Fadime',
+  'Esra',
+  'Özlem',
+  'Hacer',
+  'Yasemin',
+  'Hülya'
+]

@@ -1,0 +1,23 @@
+export default
+[
+  'Yılmaz',
+  'Kaya',
+  'Demir',
+  'Şahin',
+  'Çelik',
+  'Yıldız',
+  'Yıldırım',
+  'Öztürk',
+  'Aydın',
+  'Özdemir',
+  'Arslan',
+  'Doğan',
+  'Kılıç',
+  'Aslan',
+  'Çetin',
+  'Kara',
+  'Koç',
+  'Kurt',
+  'Özkan',
+  'Şimşek'
+]
