@@ -1,144 +1,208 @@
+import settings from 'sketch/settings'
 import DataSupplier from 'sketch/data-supplier'
+
 import send from 'sketch-module-google-analytics'
 
-import maleNames from '../assets/names-male'
-import femaleNames from '../assets/names-female'
-import lastNames from '../assets/names-last'
-import companyNames from '../assets/companies-name'
-import industries from '../assets/companies-industry'
-import businesses from '../assets/companies-business'
-import cities from '../assets/cities'
-import istanbulDistricts from '../assets/districtsIstanbul'
-import ankaraDistricts from '../assets/districtsAnkara'
+import maleNames from './data/nameMale'
+import femaleNames from './data/nameFemale'
+import lastNames from './data/nameLast'
+import companies from './data/commerceCompany'
+import industries from './data/commerceIndustry'
+import businesses from './data/commerceBusiness'
+import cities from './data/geoCity'
+import istanbul from './data/geoIstanbul'
+import ankara from './data/geoAnkara'
+import districtCities from './data/geoDistrictCity'
+import occupations from './data/bioOccupation'
+import addresses from './data/bioAddress'
 
 export const onStartup = () => {
   let rds = DataSupplier.registerDataSupplier
   let txt = 'public.text'
 
-  rds(txt, '1 - Names _ Ordered:  First Name - All', 'AllFirstNames')
-  rds(txt, '1 - Names _ Ordered:  First Name - Male', 'MaleFirstNames')
-  rds(txt, '1 - Names _ Ordered:  First Name - Female', 'FemaleFirstNames')
-  rds(txt, '1 - Names _ Random:  First Name - All', 'RandomAllFirstNames')
-  rds(txt, '1 - Names _ Random:  First Name - Male', 'RandomMaleFirstNames')
-  rds(txt, '1 - Names _ Random:  First Name - Female', 'RandomFemaleFirstNames')
+  rds(txt, '1 - Name _ Ordered:  All:  First L.', 'AllFirstL')
+  rds(txt, '1 - Name _ Ordered:  All:  First Name', 'AllFirstName')
+  rds(txt, '1 - Name _ Ordered:  All:  Full Name', 'AllFullName')
+  rds(txt, '1 - Name _ Ordered:  All:  Last, First', 'AllLastFirst')
+  rds(txt, '1 - Name _ Ordered:  Female:  First L.', 'FemaleFirstL')
+  rds(txt, '1 - Name _ Ordered:  Female:  First Name', 'FemaleFirstName')
+  rds(txt, '1 - Name _ Ordered:  Female:  Full Name', 'FemaleFullName')
+  rds(txt, '1 - Name _ Ordered:  Female:  Last, First', 'FemaleLastFirst')
+  rds(txt, '1 - Name _ Ordered:  Male:  First L.', 'MaleFirstL')
+  rds(txt, '1 - Name _ Ordered:  Male:  First Name', 'MaleFirstName')
+  rds(txt, '1 - Name _ Ordered:  Male:  Full Name', 'MaleFullName')
+  rds(txt, '1 - Name _ Ordered:  Male:  Last, First', 'MaleLastFirst')
+  rds(txt, '1 - Name _ Random:  All:  First L.', 'RandomAllFirstL')
+  rds(txt, '1 - Name _ Random:  All:  First Name', 'RandomAllFirstName')
+  rds(txt, '1 - Name _ Random:  All:  Full Name', 'RandomAllFullName')
+  rds(txt, '1 - Name _ Random:  All:  Last, First', 'RandomAllLastFirst')
+  rds(txt, '1 - Name _ Random:  Female:  First L.', 'RandomFemaleFirstL')
+  rds(txt, '1 - Name _ Random:  Female:  First Name', 'RandomFemaleFirstName')
+  rds(txt, '1 - Name _ Random:  Female:  Full Name', 'RandomFemaleFullNames')
+  rds(txt, '1 - Name _ Random:  Female:  Last, First', 'RandomFemaleLastFirst')
+  rds(txt, '1 - Name _ Random:  Male:  First L.', 'RandomMaleFirstL')
+  rds(txt, '1 - Name _ Random:  Male:  First Name', 'RandomMaleFirstName')
+  rds(txt, '1 - Name _ Random:  Male:  Full Name', 'RandomMaleFullName')
+  rds(txt, '1 - Name _ Random:  Male:  Last, First', 'RandomMaleLastFirst')
 
-  rds(txt, '1 - Names _ Ordered:  Full Name - All', 'AllFullNames')
-  rds(txt, '1 - Names _ Ordered:  Full Name - Male', 'MaleFullNames')
-  rds(txt, '1 - Names _ Ordered:  Full Name - Female', 'FemaleFullNames')
-  rds(txt, '1 - Names _ Random:  Full Name - All', 'RandomAllFullNames')
-  rds(txt, '1 - Names _ Random:  Full Name - Male', 'RandomMaleFullNames')
-  rds(txt, '1 - Names _ Random:  Full Name - Female', 'RandomFemaleFullNames')
+  rds(txt, '2 - Bio _ Ordered:  Occupation', 'Occupation')
+  rds(txt, '2 - Bio _ Ordered:  Address', 'Address')
+  rds(txt, '2 - Bio _ Random:  Occupation', 'RandomOccupation')
+  rds(txt, '2 - Bio _ Random:  Address', 'RandomAddress')
 
-  rds(txt, '1 - Names _ Ordered:  Last, First - All', 'AllLastFirst')
-  rds(txt, '1 - Names _ Ordered:  Last, First - Male', 'MaleLastFirst')
-  rds(txt, '1 - Names _ Ordered:  Last, First - Female', 'FemaleLastFirst')
-  rds(txt, '1 - Names _ Random:  Last, First - All', 'RandomAllLastFirst')
-  rds(txt, '1 - Names _ Random:  Last, First - Male', 'RandomMaleLastFirst')
-  rds(txt, '1 - Names _ Random:  Last, First - Female', 'RandomFemaleLastFirst')
+  rds(txt, '3 - Geo _ Ordered:  City', 'City')
+  rds(txt, '3 - Geo _ Ordered:  District, City', 'DistrictCity')
+  rds(txt, '3 - Geo _ Ordered:  Districts of Ankara', 'DistrictsOfAnkara')
+  rds(txt, '3 - Geo _ Ordered:  Districts of Istanbul', 'DistrictsOfIstanbul')
+  rds(txt, '3 - Geo _ Random:  City', 'RandomCity')
+  rds(txt, '3 - Geo _ Random:  District, City', 'RandomDistrictCity')
+  rds(txt, '3 - Geo _ Random:  Districts of Ankara', 'RandomDistrictsOfAnkara')
+  rds(txt, '3 - Geo _ Random:  Districts of Istanbul', 'RandomDistrictsOfIstanbul')
 
-  rds(txt, '2 - Geography _ Ordered:  Cities', 'Cities')
-  rds(txt, '2 - Geography _ Ordered:  Districts of Ankara', 'DistrictsOfAnkara')
-  rds(txt, '2 - Geography _ Ordered:  Districts of Istanbul', 'DistrictsOfIstanbul')
-  rds(txt, '2 - Geography _ Random:  Cities', 'RandomCities')
-  rds(txt, '2 - Geography _ Random:  Districts of Ankara', 'RandomDistrictsOfAnkara')
-  rds(txt, '2 - Geography _ Random:  Districts of Istanbul', 'RandomDistrictsOfIstanbul')
+  rds(txt, '4 - Commerce _ Ordered:  Business Title', 'BusinessTitle')
+  rds(txt, '4 - Commerce _ Ordered:  Company Name', 'CompanyName')
+  rds(txt, '4 - Commerce _ Ordered:  Industry Title', 'IndustryTitle')
+  rds(txt, '4 - Commerce _ Ordered:  Shop Name', 'ShopName')
+  rds(txt, '4 - Commerce _ Random:  Business Title', 'RandomBusinessTitle')
+  rds(txt, '4 - Commerce _ Random:  Company Name', 'RandomCompanyName')
+  rds(txt, '4 - Commerce _ Random:  Industry Title', 'RandomIndustryTitle')
+  rds(txt, '4 - Commerce _ Random:  Shop Name', 'RandomShopName')
 
-  rds(txt, '3 - Commerce _ Ordered:  Business Title', 'BusinessTitle')
-  rds(txt, '3 - Commerce _ Ordered:  Company Name', 'CompanyName')
-  rds(txt, '3 - Commerce _ Ordered:  Industry Title', 'IndustryTitle')
-  rds(txt, '3 - Commerce _ Ordered:  Shop Name', 'ShopName')
-  rds(txt, '3 - Commerce _ Random:  Business Title', 'RandomBusinessTitle')
-  rds(txt, '3 - Commerce _ Random:  Company Name', 'RandomCompanyName')
-  rds(txt, '3 - Commerce _ Random:  Industry Title', 'RandomIndustryTitle')
-  rds(txt, '3 - Commerce _ Random:  Shop Name', 'RandomShopName')
-
-  rds(txt, '4 - Date & Time _ Ordered 1:  dd.MM.yy', 'DateDdMmYY')
-  rds(txt, '4 - Date & Time _ Ordered 2:  dd.MM.yyyy', 'DateDdMmYyyy')
-  rds(txt, '4 - Date & Time _ Ordered 3:  dd MMM yyyy', 'DateDdMmmYyyy')
-  rds(txt, '4 - Date & Time _ Ordered 4:  dd MMMM yyyy', 'DateDdMmmmYyyy')
-  rds(txt, '4 - Date & Time _ Ordered 5:  dd MMMM yyyy dddd', 'DateDdMmmmYyyyDddd')
-  rds(txt, '4 - Date & Time _ Ordered 6:  dd.MM.yy HH:mm', 'DateDdMmYyHhMm')
-  rds(txt, '4 - Date & Time _ Ordered 7:  dd.MM.yyyy HH:mm', 'DateDdMmYyyyHhMm')
-  rds(txt, '4 - Date & Time _ Ordered 8:  dd MMMM yyyy dddd HH:mm ', 'DateDdMmmmYyyyDdddHhMm')
-  rds(txt, '4 - Date & Time _ Random 1:  dd.MM.yy', 'RandomDateDdMmYY')
-  rds(txt, '4 - Date & Time _ Random 2:  dd.MM.yyyy', 'RandomDateDdMmYyyy')
-  rds(txt, '4 - Date & Time _ Random 3:  dd MMM yyyy', 'RandomDateDdMmmYyyy')
-  rds(txt, '4 - Date & Time _ Random 4:  dd MMMM yyyy', 'RandomDateDdMmmmYyyy')
-  rds(txt, '4 - Date & Time _ Random 5:  dd MMMM yyyy dddd', 'RandomDateDdMmmmYyyyDddd')
-  rds(txt, '4 - Date & Time _ Random 6:  dd.MM.yy HH:mm', 'RandomDateDdMmYyHhMm')
-  rds(txt, '4 - Date & Time _ Random 7:  dd.MM.yyyy HH:mm', 'RandomDateDdMmYyyyHhMm')
-  rds(txt, '4 - Date & Time _ Random 8:  dd MMMM yyyy dddd HH:mm ', 'RandomDateDdMmmmYyyyDdddHhMm')
+  rds(txt, '5 - Date & Time _ Ordered 1:  dd.MM.yy', 'DateDdMmYY')
+  rds(txt, '5 - Date & Time _ Ordered 2:  dd.MM.yyyy', 'DateDdMmYyyy')
+  rds(txt, '5 - Date & Time _ Ordered 3:  dd MMM yyyy', 'DateDdMmmYyyy')
+  rds(txt, '5 - Date & Time _ Ordered 4:  dd MMMM yyyy', 'DateDdMmmmYyyy')
+  rds(txt, '5 - Date & Time _ Ordered 5:  dd MMMM yyyy dddd', 'DateDdMmmmYyyyDddd')
+  rds(txt, '5 - Date & Time _ Ordered 6:  dd.MM.yy HH:mm', 'DateDdMmYyHhMm')
+  rds(txt, '5 - Date & Time _ Ordered 7:  dd.MM.yyyy HH:mm', 'DateDdMmYyyyHhMm')
+  rds(txt, '5 - Date & Time _ Ordered 8:  dd MMMM yyyy dddd HH:mm ', 'DateDdMmmmYyyyDdddHhMm')
+  rds(txt, '5 - Date & Time _ Random 1:  dd.MM.yy', 'RandomDateDdMmYY')
+  rds(txt, '5 - Date & Time _ Random 2:  dd.MM.yyyy', 'RandomDateDdMmYyyy')
+  rds(txt, '5 - Date & Time _ Random 3:  dd MMM yyyy', 'RandomDateDdMmmYyyy')
+  rds(txt, '5 - Date & Time _ Random 4:  dd MMMM yyyy', 'RandomDateDdMmmmYyyy')
+  rds(txt, '5 - Date & Time _ Random 5:  dd MMMM yyyy dddd', 'RandomDateDdMmmmYyyyDddd')
+  rds(txt, '5 - Date & Time _ Random 6:  dd.MM.yy HH:mm', 'RandomDateDdMmYyHhMm')
+  rds(txt, '5 - Date & Time _ Random 7:  dd.MM.yyyy HH:mm', 'RandomDateDdMmYyyyHhMm')
+  rds(txt, '5 - Date & Time _ Random 8:  dd MMMM yyyy dddd HH:mm ', 'RandomDateDdMmmmYyyyDdddHhMm')
 }
 
 export const onShutdown = () => {
   DataSupplier.deregisterDataSuppliers()
 }
 
+/*
+
 // FIRST NAME
 
-export const supplyAllFirstNames = context => {
+*/
+
+export const supplyAllFirstName = context => {
   supplyOrderedData(femaleNames.concat(maleNames))
   analytics('All First Names', 'Ordered', context.data.items.count())
 }
 
-export const supplyRandomAllFirstNames = context => {
+export const supplyRandomAllFirstName = context => {
   supplyRandomData(femaleNames.concat(maleNames))
   analytics('All First Names', 'Random', context.data.items.count())
 }
 
-export const supplyMaleFirstNames = context => {
+export const supplyMaleFirstName = context => {
   supplyOrderedData(maleNames)
   analytics('Male First Names', 'Ordered', context.data.items.count())
 }
 
-export const supplyRandomMaleFirstNames = context => {
+export const supplyRandomMaleFirstName = context => {
   supplyRandomData(maleNames)
   analytics('Male First Names', 'Random', context.data.items.count())
 }
 
-export const supplyFemaleFirstNames = context => {
+export const supplyFemaleFirstName = context => {
   supplyOrderedData(femaleNames)
   analytics('Female First Names', 'Ordered', context.data.items.count())
 }
 
-export const supplyRandomFemaleFirstNames = context => {
+export const supplyRandomFemaleFirstName = context => {
   supplyRandomData(femaleNames)
   analytics('Female First Names', 'Random', context.data.items.count())
 }
 
+/*
+
+// FIRST L.
+
+*/
+
+export const supplyAllFirstL = context => {
+  supplyOrderedData(getFirstLs())
+  analytics('All First Names', 'Ordered', context.data.items.count())
+}
+
+export const supplyRandomAllFirstL = context => {
+  supplyRandomData(getFirstLs())
+  analytics('All First Names', 'Random', context.data.items.count())
+}
+
+export const supplyMaleFirstL = context => {
+  supplyOrderedData(getFirstLs('male'))
+  analytics('Male First Names', 'Ordered', context.data.items.count())
+}
+
+export const supplyRandomMaleFirstL = context => {
+  supplyRandomData(getFirstLs('male'))
+  analytics('Male First Names', 'Random', context.data.items.count())
+}
+
+export const supplyFemaleFirstL = context => {
+  supplyOrderedData(getFirstLs('female'))
+  analytics('Female First Names', 'Ordered', context.data.items.count())
+}
+
+export const supplyRandomFemaleFirstL = context => {
+  supplyRandomData(getFirstLs('female'))
+  analytics('Female First Names', 'Random', context.data.items.count())
+}
+
+/*
+
 // FULL NAME
 
-export const supplyAllFullNames = context => {
+*/
+
+export const supplyAllFullName = context => {
   supplyOrderedData(getFullNames())
   analytics('All Full Names', 'Ordered', context.data.items.count())
 }
 
-export const supplyRandomAllFullNames = context => {
+export const supplyRandomAllFullName = context => {
   supplyRandomData(getFullNames())
   analytics('All Full Names', 'Random', context.data.items.count())
 }
 
-export const supplyMaleFullNames = context => {
+export const supplyMaleFullName = context => {
   supplyOrderedData(getFullNames('male'))
   analytics('Male Full Names', 'Ordered', context.data.items.count())
 }
 
-export const supplyRandomMaleFullNames = context => {
+export const supplyRandomMaleFullName = context => {
   supplyRandomData(getFullNames('male'))
   analytics('Male Full Names', 'Random', context.data.items.count())
 }
 
-export const supplyFemaleFullNames = context => {
+export const supplyFemaleFullName = context => {
   supplyOrderedData(getFullNames('female'))
   analytics('Female Full Names', 'Ordered', context.data.items.count())
 }
 
-export const supplyRandomFemaleFullNames = context => {
+export const supplyRandomFemaleFullName = context => {
   supplyRandomData(getFullNames('female'))
   analytics('Female Full Names', 'Random', context.data.items.count())
 }
 
+/*
+
 // LAST, FIRST
+
+*/
 
 export const supplyAllLastFirst = context => {
   supplyOrderedData(getLastFirst())
@@ -170,39 +234,83 @@ export const supplyRandomFemaleLastFirst = context => {
   analytics('Female Last, First', 'Random', context.data.items.count())
 }
 
-// GEOGRAPHY
+/*
 
-export const supplyCities = context => {
+// BIO
+
+*/
+
+export const supplyOccupation = context => {
+  supplyOrderedData(occupations)
+  analytics('Occupations', 'Ordered', context.data.items.count())
+}
+
+export const supplyRandomOccupation = context => {
+  supplyRandomData(occupations)
+  analytics('Occupations', 'Random', context.data.items.count())
+}
+
+export const supplyAddress = context => {
+  supplyOrderedData(addresses)
+  analytics('Addresses', 'Ordered', context.data.items.count())
+}
+
+export const supplyRandomAddress = context => {
+  supplyRandomData(addresses)
+  analytics('Addresses', 'Random', context.data.items.count())
+}
+
+/*
+
+// GEO
+
+*/
+
+export const supplyCity = context => {
   supplyOrderedData(cities)
   analytics('Cities', 'Ordered', context.data.items.count())
 }
 
-export const supplyRandomCities = context => {
+export const supplyRandomCity = context => {
   supplyRandomData(cities)
   analytics('Cities', 'Random', context.data.items.count())
 }
 
+export const supplyDistrictCity = context => {
+  supplyOrderedData(districtCities)
+  analytics('District, Cities', 'Ordered', context.data.items.count())
+}
+
+export const supplyRandomDistrictCity = context => {
+  supplyRandomData(districtCities)
+  analytics('District, Cities', 'Random', context.data.items.count())
+}
+
 export const supplyDistrictsOfAnkara = context => {
-  supplyOrderedData(ankaraDistricts)
+  supplyOrderedData(ankara)
   analytics('Districs of Ankara', 'Ordered', context.data.items.count())
 }
 
 export const supplyRandomDistrictsOfAnkara = context => {
-  supplyRandomData(ankaraDistricts)
+  supplyRandomData(ankara)
   analytics('Districs of Ankara', 'Random', context.data.items.count())
 }
 
 export const supplyDistrictsOfIstanbul = context => {
-  supplyOrderedData(istanbulDistricts)
+  supplyOrderedData(istanbul)
   analytics('Districs of Istanbul', 'Ordered', context.data.items.count())
 }
 
 export const supplyRandomDistrictsOfIstanbul = context => {
-  supplyRandomData(istanbulDistricts)
+  supplyRandomData(istanbul)
   analytics('Districs of Istanbul', 'Random', context.data.items.count())
 }
 
+/*
+
 // COMMERCE
+
+*/
 
 export const supplyIndustryTitle = context => {
   supplyOrderedData(industries)
@@ -244,7 +352,11 @@ export const supplyRandomShopName = context => {
   analytics('Shop Name', 'Random', context.data.items.count())
 }
 
+/*
+
 // DATE & TIME
+
+*/
 
 export const supplyDateDdMmYY = context => {
   let options = {
@@ -422,12 +534,17 @@ export const supplyRandomDateDdMmmmYyyyDdddHhMm = context => {
   analytics('dd.MM.yyyy dddd HH:mm', 'Random', context.data.items.count())
 }
 
+/*
+
 // SUPPLIERS
+
+*/
 
 const supplyOrderedData = data => {
   DataSupplier.supplyData(
     context.data.key,
-    data.sort()
+    data.sort((a, b) => a.localeCompare(b, 'tr-TR', { sensitivity: 'base' }))
+      .slice(0, context.data.items.count())
   )
 }
 
@@ -435,6 +552,7 @@ const supplyRandomData = data => {
   DataSupplier.supplyData(
     context.data.key,
     data.sort(() => Math.random() - 0.5)
+      .slice(0, context.data.items.count())
   )
 }
 
@@ -452,26 +570,48 @@ const supplyRandomDate = (data, options) => {
   )
 }
 
+/*
+
 // UTILS
+
+*/
 
 const getFullNames = gender => {
   let names
   switch (gender) {
     case 'female':
-      return femaleNames.map(name => {
-        return femaleNames[Math.floor(Math.random() * femaleNames.length)] +
-          ' ' + lastNames[Math.floor(Math.random() * lastNames.length)]
+      return femaleNames.map(n => {
+        return n + ' ' + lastNames[Math.floor(Math.random() * lastNames.length)]
       })
     case 'male':
-      return maleNames.map(name => {
-        return maleNames[Math.floor(Math.random() * maleNames.length)] +
-          ' ' + lastNames[Math.floor(Math.random() * lastNames.length)]
+      return maleNames.map(n => {
+        return n + ' ' + lastNames[Math.floor(Math.random() * lastNames.length)]
       })
     default:
       names = femaleNames.concat(maleNames)
-      return names.map(name => {
-        return names[Math.floor(Math.random() * names.length)] +
-          ' ' + lastNames[Math.floor(Math.random() * lastNames.length)]
+      names.sort((a, b) => a.localeCompare(b, 'tr-TR', { sensitivity: 'base' }))
+      return names.map(n => {
+        return n + ' ' + lastNames[Math.floor(Math.random() * lastNames.length)]
+      })
+  }
+}
+
+const getFirstLs = gender => {
+  let names
+  switch (gender) {
+    case 'female':
+      return femaleNames.map(n => {
+        return n + ' ' + lastNames[Math.floor(Math.random() * lastNames.length)][0] + '.'
+      })
+    case 'male':
+      return maleNames.map(n => {
+        return n + ' ' + lastNames[Math.floor(Math.random() * lastNames.length)][0] + '.'
+      })
+    default:
+      names = femaleNames.concat(maleNames)
+      names.sort((a, b) => a.localeCompare(b, 'tr-TR', { sensitivity: 'base' }))
+      return names.map(n => {
+        return n + ' ' + lastNames[Math.floor(Math.random() * lastNames.length)][0] + '.'
       })
   }
 }
@@ -480,34 +620,32 @@ const getLastFirst = gender => {
   let names
   switch (gender) {
     case 'female':
-      return femaleNames.map(name => {
-        return lastNames[Math.floor(Math.random() * lastNames.length)] +
-          ', ' + femaleNames[Math.floor(Math.random() * femaleNames.length)]
+      return femaleNames.map(n => {
+        return n + ', ' + femaleNames[Math.floor(Math.random() * femaleNames.length)]
       })
     case 'male':
-      return maleNames.map(name => {
-        return lastNames[Math.floor(Math.random() * lastNames.length)] +
-          ', ' + maleNames[Math.floor(Math.random() * maleNames.length)]
+      return maleNames.map(n => {
+        return n + ', ' + maleNames[Math.floor(Math.random() * maleNames.length)]
       })
     default:
       names = femaleNames.concat(maleNames)
-      return names.map(name => {
-        return lastNames[Math.floor(Math.random() * lastNames.length)] +
-          ', ' + names[Math.floor(Math.random() * names.length)]
+      names.sort((a, b) => a.localeCompare(b, 'tr-TR', { sensitivity: 'base' }))
+      return names.map(n => {
+        return n + ', ' + names[Math.floor(Math.random() * names.length)]
       })
   }
 }
 
 const getCompanies = () => {
-  return companyNames.map(name => {
-    return companyNames[Math.floor(Math.random() * companyNames.length)] +
+  return companies.map(name => {
+    return companies[Math.floor(Math.random() * companies.length)] +
       ' ' + industries[Math.floor(Math.random() * industries.length)]
   })
 }
 
 const getStores = () => {
-  return companyNames.map(name => {
-    return companyNames[Math.floor(Math.random() * companyNames.length)] +
+  return companies.map(name => {
+    return companies[Math.floor(Math.random() * companies.length)] +
       ' ' + businesses[Math.floor(Math.random() * businesses.length)]
   })
 }
@@ -538,11 +676,37 @@ const getDateArray = arrayLength => {
 }
 
 const analytics = (action, label, value) => {
+  let analyticsAllowed = (settings.settingForKey('analyticsAllowed')) || false
+
+  if (analyticsAllowed != true) {
+    let dialog = NSAlert.alloc().init()
+    if (context.plugin.alertIcon()) {
+      dialog.icon = context.plugin.alertIcon()
+    }
+    dialog.setMessageText('Allow Google Analytics')
+    dialog.setInformativeText(
+      context.plugin.name() + ' ' +
+        'plugin use Google Analytics for tacking data. ' +
+        'You can to click "Disallow" to disable tracking. ' +
+        'You have to click "Allow" ' +
+        'if you don\'t want to see this dialog again.'
+    )
+    dialog.addButtonWithTitle('Allow')
+    dialog.addButtonWithTitle('Disallow')
+    let response = dialog.runModal()
+    if (response == 1000) {
+      analyticsAllowed = true
+      settings.setSettingForKey('analyticsAllowed', analyticsAllowed)
+    }
+  }
+
   const ID = 'UA-5738625-2'
   const payload = {}
   payload.ec = context.plugin.name()
   payload.ea = (action) || context.command.name()
   if (label) { payload.el = label }
   if (value) { payload.ev = value }
-  return send(context, ID, 'event', payload)
+  if (analyticsAllowed) {
+    return send(context, ID, 'event', payload)
+  }
 }

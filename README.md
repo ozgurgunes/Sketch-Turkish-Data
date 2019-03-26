@@ -21,31 +21,39 @@ Plugin supplies all data both ordered and random. Newest to oldest for date-time
 
 ### Names
 
-* Ordered: First Name - All
-* Ordered: First Name - Male
-* Ordered: First Name - Female
-* Ordered: Full Name - All
-* Ordered: Full Name - Male
-* Ordered: Full Name - Female
-* Ordered: Last, First - All
-* Ordered: Last, First - Male
-* Ordered: Last, First - Female
-* Random: First Name - All
-* Random: First Name - Male
-* Random: First Name - Female
-* Random: Full Name - All
-* Random: Full Name - Male
-* Random: Full Name - Female
-* Random: Last, First - All
-* Random: Last, First - Male
-* Random: Last, First - Female
+* Ordered: First L. (All)
+* Ordered: First Name (All)
+* Ordered: Full Name (All)
+* Ordered: Last, First (All)
+* Ordered: First L. (Female)
+* Ordered: First Name (Female)
+* Ordered: Full Name (Female)
+* Ordered: Last, First (Female)
+* Ordered: First L. (Male)
+* Ordered: First Name (Male)
+* Ordered: Full Name (Male)
+* Ordered: Last, First (Male)
+* Random: First L. (All)
+* Random: First Name (All)
+* Random: Full Name (All)
+* Random: Last, First (All)
+* Random: First L. (Female)
+* Random: First Name (Female)
+* Random: Full Name (Female)
+* Random: Last, First (Female)
+* Random: First L. (Male)
+* Random: First Name (Male)
+* Random: Full Name (Male)
+* Random: Last, First (Male)
 
 ### Geography
 
-* Ordered: Cities
+* Ordered: City
+* Ordered: District, City
 * Ordered: Districts of Ankara
 * Ordered: Districts of Istanbul
-* Random: Cities
+* Random: City
+* Random: District, City
 * Random: Districts of Ankara
 * Random: Districts of Istanbul
 

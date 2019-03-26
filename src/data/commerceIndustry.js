@@ -8,7 +8,7 @@ export default
   'Demir ve Demir Dışı Metaller',
   'Denizcilik',
   'Deri',
-  'Doğal Gaz ',
+  'Gaz',
   'Döküm Sanayi',
   'Eğitim',
   'Enerji',
@@ -34,7 +34,7 @@ export default
   'Medya',
   'İletişim',
   'Mobilya',
-  'Ormancılik',
+  'Ormancılık',
   'Otomotiv',
   'Patent ve Marka',
   'Perakendecilik',
@@ -56,6 +56,5 @@ export default
   'Ulaştırma',
   'Lojistik',
   'Yazılım',
-  'Yükseköğretim',
   'Züccaciye'
 ]
