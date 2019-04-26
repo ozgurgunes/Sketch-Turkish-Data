@@ -1,8 +1,6 @@
 import settings from 'sketch/settings'
 import DataSupplier from 'sketch/data-supplier'
-
-import send from 'sketch-module-google-analytics'
-
+import analytics from './analytics'
 import maleNames from './data/nameMale'
 import femaleNames from './data/nameFemale'
 import lastNames from './data/nameLast'
@@ -288,22 +286,22 @@ export const supplyRandomDistrictCity = context => {
 
 export const supplyDistrictsOfAnkara = context => {
   supplyOrderedData(ankara)
-  analytics('Districs of Ankara', 'Ordered', context.data.items.count())
+  analytics('Districts of Ankara', 'Ordered', context.data.items.count())
 }
 
 export const supplyRandomDistrictsOfAnkara = context => {
   supplyRandomData(ankara)
-  analytics('Districs of Ankara', 'Random', context.data.items.count())
+  analytics('Districts of Ankara', 'Random', context.data.items.count())
 }
 
 export const supplyDistrictsOfIstanbul = context => {
   supplyOrderedData(istanbul)
-  analytics('Districs of Istanbul', 'Ordered', context.data.items.count())
+  analytics('Districts of Istanbul', 'Ordered', context.data.items.count())
 }
 
 export const supplyRandomDistrictsOfIstanbul = context => {
   supplyRandomData(istanbul)
-  analytics('Districs of Istanbul', 'Random', context.data.items.count())
+  analytics('Districts of Istanbul', 'Random', context.data.items.count())
 }
 
 /*
@@ -673,40 +671,4 @@ const getDateArray = arrayLength => {
     i++
   }
   return dates
-}
-
-const analytics = (action, label, value) => {
-  let analyticsAllowed = (settings.settingForKey('analyticsAllowed')) || false
-
-  if (analyticsAllowed != true) {
-    let dialog = NSAlert.alloc().init()
-    if (context.plugin.alertIcon()) {
-      dialog.icon = context.plugin.alertIcon()
-    }
-    dialog.setMessageText('Allow Google Analytics')
-    dialog.setInformativeText(
-      context.plugin.name() + ' ' +
-        'plugin use Google Analytics for tacking data. ' +
-        'You can to click "Disallow" to disable tracking. ' +
-        'You have to click "Allow" ' +
-        'if you don\'t want to see this dialog again.'
-    )
-    dialog.addButtonWithTitle('Allow')
-    dialog.addButtonWithTitle('Disallow')
-    let response = dialog.runModal()
-    if (response == 1000) {
-      analyticsAllowed = true
-      settings.setSettingForKey('analyticsAllowed', analyticsAllowed)
-    }
-  }
-
-  const ID = 'UA-5738625-2'
-  const payload = {}
-  payload.ec = context.plugin.name()
-  payload.ea = (action) || context.command.name()
-  if (label) { payload.el = label }
-  if (value) { payload.ev = value }
-  if (analyticsAllowed) {
-    return send(context, ID, 'event', payload)
-  }
 }
