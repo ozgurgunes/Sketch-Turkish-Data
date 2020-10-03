@@ -5,7 +5,7 @@
 [image]: https://img.shields.io/github/release/ozgurgunes/Sketch-Turkish-Data.svg?label=Download
 [link]: https://github.com/ozgurgunes/Sketch-Turkish-Data/releases/latest/download/turkish-data.sketchplugin.zip
 
-Turkish Data plugin for Sketch, supplies various Turkish data such as names, cities, date-time and some commercial activities.
+Turkish Data plugin for Sketch, supplies various Turkish data such as names, cities, date-time and some business activities.
 
 ## Installation
 
@@ -21,62 +21,67 @@ Plugin supplies all data both ordered and random. Newest to oldest for date-time
 
 ### Names
 
-* Ordered: First L. (All)
-* Ordered: First Name (All)
-* Ordered: Full Name (All)
-* Ordered: Last, First (All)
-* Ordered: First L. (Female)
-* Ordered: First Name (Female)
-* Ordered: Full Name (Female)
-* Ordered: Last, First (Female)
-* Ordered: First L. (Male)
-* Ordered: First Name (Male)
-* Ordered: Full Name (Male)
-* Ordered: Last, First (Male)
-* Random: First L. (All)
-* Random: First Name (All)
-* Random: Full Name (All)
-* Random: Last, First (All)
-* Random: First L. (Female)
-* Random: First Name (Female)
-* Random: Full Name (Female)
-* Random: Last, First (Female)
-* Random: First L. (Male)
-* Random: First Name (Male)
-* Random: Full Name (Male)
-* Random: Last, First (Male)
+* Random: Any: First L.
+* Random: Any: First Name
+* Random: Any: Full Name
+* Random: Any: Last, First
+* Random: Female: First L.
+* Random: Female: First Name
+* Random: Female: Full Name
+* Random: Female: Last, First
+* Random: Male: First L.
+* Random: Male: First Name
+* Random: Male: Full Name
+* Random: Male: Last, First
 
-### Geography
+* Ordered: Any: First L.
+* Ordered: Any: First Name
+* Ordered: Any: Full Name
+* Ordered: Any: Last, First
+* Ordered: Female: First L.
+* Ordered: Female: First Name
+* Ordered: Female: Full Name
+* Ordered: Female: Last, First
+* Ordered: Male: First L.
+* Ordered: Male: First Name
+* Ordered: Male: Full Name
+* Ordered: Male: Last, First
 
-* Ordered: City
-* Ordered: District, City
-* Ordered: Districts of Ankara
-* Ordered: Districts of Istanbul
+### Location
+
+* Random: Address
 * Random: City
+* Random: Country
+* Random: District / City
 * Random: District, City
 * Random: Districts of Ankara
 * Random: Districts of Istanbul
 
-### Commerce
-* Ordered: Business Title
-* Ordered: Company Name
-* Ordered: Industry Title
-* Ordered: Shop Name
+* Ordered: Address
+* Ordered: City
+* Ordered: Country
+* Ordered: District / City
+* Ordered: District, City
+* Ordered: Districts of Ankara
+* Ordered: Districts of Istanbul
+
+### Business
 * Random: Business Title
 * Random: Company Name
 * Random: Industry Title
+* Random: Occupation
 * Random: Shop Name
+
+* Ordered: Business Title
+* Ordered: Company Name
+* Ordered: Industry Title
+* Ordered: Occupation
+* Ordered: Shop Name
 
 ### Date & Time
 
-* Ordered: dd.MM.yy
-* Ordered: dd.MM.yyyy
-* Ordered: dd MMM yyyy
-* Ordered: dd MMMM yyyy
-* Ordered: dd MMMM yyyy dddd
-* Ordered: dd.MM.yy HH:mm
-* Ordered: dd.MM.yyyy HH:mm
-* Ordered: dd MMMM yyyy dddd HH:mm 
+* Random: HH:mm
+* Random: HH:mm:SS
 * Random: dd.MM.yy
 * Random: dd.MM.yyyy
 * Random: dd MMM yyyy
@@ -85,3 +90,14 @@ Plugin supplies all data both ordered and random. Newest to oldest for date-time
 * Random: dd.MM.yy HH:mm
 * Random: dd.MM.yyyy HH:mm
 * Random: dd MMMM yyyy dddd HH:mm 
+
+* Ordered: HH:mm
+* Ordered: HH:mm:SS
+* Ordered: dd.MM.yy
+* Ordered: dd.MM.yyyy
+* Ordered: dd MMM yyyy
+* Ordered: dd MMMM yyyy
+* Ordered: dd MMMM yyyy dddd
+* Ordered: dd.MM.yy HH:mm
+* Ordered: dd.MM.yyyy HH:mm
+* Ordered: dd MMMM yyyy dddd HH:mm 
