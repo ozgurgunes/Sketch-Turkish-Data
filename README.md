@@ -1,11 +1,11 @@
-<img src="https://github.com/ozgurgunes/Sketch-Turkish-Data/blob/master/assets/icon.png?raw=true" alt="Sketch Turkish Data" width="128" align="right" />
+<img src="https://github.com/ozgurgunes/Sketch-Turkish-Data/blob/master/assets/icon.png?raw=true" alt="Sketch Turkish Data" width="192" align="right" />
 
 # Turkish Data  [![Download Latest][image]][link]
 
 [image]: https://img.shields.io/github/release/ozgurgunes/Sketch-Turkish-Data.svg?label=Download
 [link]: https://github.com/ozgurgunes/Sketch-Turkish-Data/releases/latest/download/turkish-data.sketchplugin.zip
 
-Turkish Data plugin for Sketch, supplies various Turkish data such as names, cities, date-time and some business activities.
+Turkish Data plugin for Sketch, provides names, locations, business titles and dates in various formats.
 
 ## Installation
 

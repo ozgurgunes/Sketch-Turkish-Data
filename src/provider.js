@@ -5,7 +5,7 @@ export * from './supplyDateTime'
 export * from './supplyLocation'
 export * from './supplyBusiness'
 
-export const onStartup = () => {
+export function onStartup() {
   let register = DataSupplier.registerDataSupplier
   let text = 'public.text'
 
@@ -34,7 +34,7 @@ export const onStartup = () => {
   register(text, '2. Name (Ordered) _ Male:  First Name', 'MaleFirstName')
   register(text, '2. Name (Ordered) _ Male:  Full Name', 'MaleFullName')
   register(text, '2. Name (Ordered) _ Male:  Last, First', 'MaleLastFirst')
-  
+
   register(text, '3. Location (Random) _ Address', 'RandomAddress')
   register(text, '3. Location (Random) _ City', 'RandomCity')
   register(text, '3. Location (Random) _ Country', 'RandomCountry')
@@ -42,7 +42,7 @@ export const onStartup = () => {
   register(text, '3. Location (Random) _ District, City', 'RandomDistrictCommaCity')
   register(text, '3. Location (Random) _ Districts of Ankara', 'RandomDistrictsOfAnkara')
   register(text, '3. Location (Random) _ Districts of Istanbul', 'RandomDistrictsOfIstanbul')
-  
+
   register(text, '4. Location (Ordered) _ Address', 'Address')
   register(text, '4. Location (Ordered) _ City', 'City')
   register(text, '4. Location (Ordered) _ Country', 'Country')
@@ -50,7 +50,7 @@ export const onStartup = () => {
   register(text, '4. Location (Ordered) _ District, City', 'DistrictCommaCity')
   register(text, '4. Location (Ordered) _ Districts of Ankara', 'DistrictsOfAnkara')
   register(text, '4. Location (Ordered) _ Districts of Istanbul', 'DistrictsOfIstanbul')
-  
+
   register(text, '5. Business (Random) _ Business Title', 'RandomBusinessTitle')
   register(text, '5. Business (Random) _ Company Name', 'RandomCompanyName')
   register(text, '5. Business (Random) _ Industry Title', 'RandomIndustryTitle')
@@ -86,7 +86,7 @@ export const onStartup = () => {
   register(text, '8. Date & Time (Ordered) _ 10:  dd MMMM yyyy dddd HH:mm ', 'DateTimeDdMmmmYyyyDdddHhMm')
 }
 
-export const onShutdown = () => {
+export function onShutdown() {
   DataSupplier.deregisterDataSuppliers()
 }
 

@@ -1,13 +1,12 @@
 {
   "name": "Turkish Data",
-  "description": "Turkish data supplier plugin.",
-  "appcast": "https://raw.githubusercontent.com/ozgurgunes/Sketch-Turkish-Data/master/.appcast.xml",
+  "description": "Turkish data supplier plugin, providing names, locations, business titles and dates in various formats.",
   "identifier": "com.gunesozgur.sketch.turkish-data",
-  "homepage": "https://github.com/ozgurgunes/Sketch-Turkish-Data",
-  "author": "Özgür Güneş",
+  "author": "Ozgur Gunes",
   "authorEmail": "o.gunes@gmail.com",
-  "compatibleVersion": 52,
-  "bundleVersion": 1,
+  "$schema": "https://raw.githubusercontent.com/sketch-hq/SketchAPI/develop/docs/sketch-plugin-manifest-schema.json",
+  "appcast": "https://raw.githubusercontent.com/ozgurgunes/Sketch-Turkish-Data/master/.appcast.xml",
+  "homepage": "https://github.com/ozgurgunes/Sketch-Turkish-Data",
   "icon": "icon.png",
   "suppliesData": true,
   "commands": [
@@ -91,7 +90,6 @@
           "RandomDateTimeDdMmYyHhMm": "supplyRandomDateTimeDdMmYyHhMm",
           "RandomDateTimeDdMmYyyyHhMm": "supplyRandomDateTimeDdMmYyyyHhMm",
           "RandomDateTimeDdMmmmYyyyDdddHhMm": "supplyRandomDateTimeDdMmmmYyyyDdddHhMm"
-
         }
       }
     }

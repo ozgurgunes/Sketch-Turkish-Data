@@ -1,5 +1,4 @@
-export default
-[
+export default [
   'İnternet Bankacılığı Uzmanı',
   'Ahşap Restorasyon Şefi',
   'Web Yönetmeni',

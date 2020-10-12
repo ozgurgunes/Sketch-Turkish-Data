@@ -1,7 +1,7 @@
 {
   "name": "turkish-data",
-  "description": "Turkish data supplier plugin.",
-  "author": "Özgür Güneş",
+  "description": "Turkish data supplier plugin, provides names, locations, business titles and dates in various formats.",
+  "author": "Ozgur Gunes",
   "authorEmail": "o.gunes@gmail.com",
   "homepage": "https://github.com/ozgurgunes/Sketch-Turkish-Data",
   "license": "MIT",
@@ -42,12 +42,6 @@
     "eslint-config-prettier": "^4.3.0",
     "eslint-config-sketch": "^0.2.4",
     "eslint-plugin-prettier": "^3.1.2",
-    "prettier": "^1.19.1",
-    "standard": "^12.0.1"
-  },
-  "babel": {
-    "presets": [
-      "@skpm/babel-preset"
-    ]
+    "prettier": "^1.19.1"
   }
 }

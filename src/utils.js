@@ -1,4 +1,4 @@
-import DataSupplier from "sketch/data-supplier"
+import DataSupplier from 'sketch/data-supplier'
 
 function fitData(data) {
   var i = 0
@@ -18,7 +18,7 @@ export function supplyOrderedData(data) {
   DataSupplier.supplyData(
     context.data.key,
     fitData(
-      data.sort((a, b) => a.localeCompare(b, "tr-TR", { sensitivity: "base" }))
+      data.sort((a, b) => a.localeCompare(b, 'tr-TR', { sensitivity: 'base' }))
     )
   )
 }
@@ -35,14 +35,14 @@ export function supplyOrderedDateTime(data, options) {
     context.data.key,
     data
       .sort((a, b) => a < b)
-      .map((date) => date.toLocaleDateString("tr-TR", options))
+      .map(date => date.toLocaleDateString('tr-TR', options))
   )
 }
 
 export function supplyRandomDateTime(data, options) {
   DataSupplier.supplyData(
     context.data.key,
-    data.map((date) => date.toLocaleDateString("tr-TR", options))
+    data.map(date => date.toLocaleDateString('tr-TR', options))
   )
 }
 
@@ -51,14 +51,14 @@ export function supplyOrderedTime(data, options) {
     context.data.key,
     data
       .sort((a, b) => a < b)
-      .map((date) => date.toLocaleTimeString("tr-TR", options))
+      .map(date => date.toLocaleTimeString('tr-TR', options))
   )
 }
 
 export function supplyRandomTime(data, options) {
   DataSupplier.supplyData(
     context.data.key,
-    data.map((date) => date.toLocaleTimeString("tr-TR", options))
+    data.map(date => date.toLocaleTimeString('tr-TR', options))
   )
 }
 

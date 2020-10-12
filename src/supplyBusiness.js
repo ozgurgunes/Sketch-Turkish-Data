@@ -1,26 +1,30 @@
-import { supplyOrderedData, supplyRandomData } from "./utils"
+import { supplyOrderedData, supplyRandomData } from './utils'
 import analytics from './analytics'
 
 import industries from './data/businessIndustry'
-import occupations from "./data/businessOccupation"
+import occupations from './data/businessOccupation'
 import titles from './data/businessTitle'
 import works from './data/businessWork'
 
-
 function getCompanies() {
-  return titles.map(name => {
-    return titles[Math.floor(Math.random() * titles.length)] +
-      ' ' + industries[Math.floor(Math.random() * industries.length)]
+  return titles.map(() => {
+    return (
+      titles[Math.floor(Math.random() * titles.length)] +
+      ' ' +
+      industries[Math.floor(Math.random() * industries.length)]
+    )
   })
 }
 
 function getShops() {
-  return titles.map(name => {
-    return titles[Math.floor(Math.random() * titles.length)] +
-      ' ' + works[Math.floor(Math.random() * works.length)]
+  return titles.map(() => {
+    return (
+      titles[Math.floor(Math.random() * titles.length)] +
+      ' ' +
+      works[Math.floor(Math.random() * works.length)]
+    )
   })
 }
-
 
 export function supplyIndustryTitle(context) {
   supplyOrderedData(industries)
@@ -54,12 +58,12 @@ export function supplyRandomCompanyName(context) {
 
 export function supplyOccupation(context) {
   supplyOrderedData(occupations)
-  analytics("Occupations", "Ordered", context.data.items.count())
+  analytics('Occupations', 'Ordered', context.data.items.count())
 }
 
 export function supplyRandomOccupation(context) {
   supplyRandomData(occupations)
-  analytics("Occupations", "Random", context.data.items.count())
+  analytics('Occupations', 'Random', context.data.items.count())
 }
 
 export function supplyShopName(context) {

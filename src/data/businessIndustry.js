@@ -1,5 +1,4 @@
-export default
-[
+export default [
   'Ambalaj',
   'Biyoteknoloji',
   'Cam ve Cam Ürünleri',

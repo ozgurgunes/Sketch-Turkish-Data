@@ -1,5 +1,4 @@
-export default
-[
+export default [
   'Petrol',
   'Akaryakıt',
   'Otomotiv',
