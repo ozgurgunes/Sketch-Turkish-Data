@@ -1,5 +1,5 @@
+import analytics from '@ozgurgunes/sketch-plugin-analytics'
 import { supplyOrderedData, supplyRandomData } from './utils'
-import analytics from './analytics'
 
 import maleNames from './data/nameMale'
 import femaleNames from './data/nameFemale'

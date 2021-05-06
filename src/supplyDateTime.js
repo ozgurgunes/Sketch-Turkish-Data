@@ -1,11 +1,10 @@
+import analytics from '@ozgurgunes/sketch-plugin-analytics'
 import {
   supplyOrderedDateTime,
   supplyRandomDateTime,
   supplyOrderedTime,
-  supplyRandomTime
+  supplyRandomTime,
 } from './utils'
-
-import analytics from './analytics'
 
 function getDateTimeArray(arrayLength) {
   /*
@@ -50,7 +49,7 @@ function getTimeArray(arrayLength) {
 export function supplyDateTimeHhMm(context) {
   let options = {
     hour: '2-digit',
-    minute: '2-digit'
+    minute: '2-digit',
   }
   supplyOrderedTime(getTimeArray(context.data.items.count()), options)
   analytics('HH:mm', 'Ordered', context.data.items.count())
@@ -59,7 +58,7 @@ export function supplyDateTimeHhMm(context) {
 export function supplyRandomDateTimeHhMm(context) {
   let options = {
     hour: '2-digit',
-    minute: '2-digit'
+    minute: '2-digit',
   }
   supplyRandomTime(getTimeArray(context.data.items.count()), options)
   analytics('HH:mm', 'Random', context.data.items.count())
@@ -69,7 +68,7 @@ export function supplyDateTimeHhMmSs(context) {
   let options = {
     hour: '2-digit',
     minute: '2-digit',
-    second: '2-digit'
+    second: '2-digit',
   }
   supplyOrderedTime(getTimeArray(context.data.items.count()), options)
   analytics('HH:mm', 'Ordered', context.data.items.count())
@@ -79,7 +78,7 @@ export function supplyRandomDateTimeHhMmSs(context) {
   let options = {
     hour: '2-digit',
     minute: '2-digit',
-    second: '2-digit'
+    second: '2-digit',
   }
   supplyRandomTime(getTimeArray(context.data.items.count()), options)
   analytics('HH:mm', 'Random', context.data.items.count())
@@ -89,7 +88,7 @@ export function supplyDateTimeDdMmYY(context) {
   let options = {
     day: '2-digit',
     month: '2-digit',
-    year: '2-digit'
+    year: '2-digit',
   }
   supplyOrderedDateTime(getDateTimeArray(context.data.items.count()), options)
   analytics('dd.MM.yy', 'Ordered', context.data.items.count())
@@ -99,7 +98,7 @@ export function supplyRandomDateTimeDdMmYY(context) {
   let options = {
     day: '2-digit',
     month: '2-digit',
-    year: '2-digit'
+    year: '2-digit',
   }
   supplyRandomDateTime(getDateTimeArray(context.data.items.count()), options)
   analytics('dd.MM.yy', 'Random', context.data.items.count())
@@ -109,7 +108,7 @@ export function supplyDateTimeDdMmYyyy(context) {
   let options = {
     day: '2-digit',
     month: '2-digit',
-    year: 'numeric'
+    year: 'numeric',
   }
   supplyOrderedDateTime(getDateTimeArray(context.data.items.count()), options)
   analytics('dd.MM.yyyy', 'Ordered', context.data.items.count())
@@ -119,7 +118,7 @@ export function supplyRandomDateTimeDdMmYyyy(context) {
   let options = {
     day: '2-digit',
     month: '2-digit',
-    year: 'numeric'
+    year: 'numeric',
   }
   supplyRandomDateTime(getDateTimeArray(context.data.items.count()), options)
   analytics('dd.MM.yyyy', 'Random', context.data.items.count())
@@ -129,7 +128,7 @@ export function supplyDateTimeDdMmmYyyy(context) {
   let options = {
     day: '2-digit',
     month: 'short',
-    year: 'numeric'
+    year: 'numeric',
   }
   supplyOrderedDateTime(getDateTimeArray(context.data.items.count()), options)
   analytics('dd.MMM.yyyy', 'Ordered', context.data.items.count())
@@ -139,7 +138,7 @@ export function supplyRandomDateTimeDdMmmYyyy(context) {
   let options = {
     day: '2-digit',
     month: 'short',
-    year: 'numeric'
+    year: 'numeric',
   }
   supplyRandomDateTime(getDateTimeArray(context.data.items.count()), options)
   analytics('dd.MMM.yyyy', 'Random', context.data.items.count())
@@ -149,7 +148,7 @@ export function supplyDateTimeDdMmmmYyyy(context) {
   let options = {
     day: '2-digit',
     month: 'long',
-    year: 'numeric'
+    year: 'numeric',
   }
   supplyOrderedDateTime(getDateTimeArray(context.data.items.count()), options)
   analytics('dd.MMMM.yyyy', 'Ordered', context.data.items.count())
@@ -159,7 +158,7 @@ export function supplyRandomDateTimeDdMmmmYyyy(context) {
   let options = {
     day: '2-digit',
     month: 'long',
-    year: 'numeric'
+    year: 'numeric',
   }
   supplyRandomDateTime(getDateTimeArray(context.data.items.count()), options)
   analytics('dd.MMMM.yyyy', 'Random', context.data.items.count())
@@ -170,7 +169,7 @@ export function supplyDateTimeDdMmmmYyyyDddd(context) {
     day: '2-digit',
     month: 'long',
     year: 'numeric',
-    weekday: 'long'
+    weekday: 'long',
   }
   supplyOrderedDateTime(getDateTimeArray(context.data.items.count()), options)
   analytics('dd.MMMM.yyyy dddd', 'Ordered', context.data.items.count())
@@ -181,7 +180,7 @@ export function supplyRandomDateTimeDdMmmmYyyyDddd(context) {
     day: '2-digit',
     month: 'long',
     year: 'numeric',
-    weekday: 'long'
+    weekday: 'long',
   }
   supplyRandomDateTime(getDateTimeArray(context.data.items.count()), options)
   analytics('dd.MMMM.yyyy dddd', 'Random', context.data.items.count())
@@ -193,7 +192,7 @@ export function supplyDateTimeDdMmYyHhMm(context) {
     month: '2-digit',
     year: '2-digit',
     hour: '2-digit',
-    minute: '2-digit'
+    minute: '2-digit',
   }
   supplyOrderedDateTime(getDateTimeArray(context.data.items.count()), options)
   analytics('dd.MM.yy HH:mm', 'Ordered', context.data.items.count())
@@ -205,7 +204,7 @@ export function supplyRandomDateTimeDdMmYyHhMm(context) {
     month: '2-digit',
     year: '2-digit',
     hour: '2-digit',
-    minute: '2-digit'
+    minute: '2-digit',
   }
   supplyRandomDateTime(getDateTimeArray(context.data.items.count()), options)
   analytics('dd.MM.yy HH:mm', 'Random', context.data.items.count())
@@ -217,7 +216,7 @@ export function supplyDateTimeDdMmYyyyHhMm(context) {
     month: '2-digit',
     year: 'numeric',
     hour: '2-digit',
-    minute: '2-digit'
+    minute: '2-digit',
   }
   supplyOrderedDateTime(getDateTimeArray(context.data.items.count()), options)
   analytics('dd.MM.yyyy HH:mm', 'Ordered', context.data.items.count())
@@ -229,7 +228,7 @@ export function supplyRandomDateTimeDdMmYyyyHhMm(context) {
     month: '2-digit',
     year: 'numeric',
     hour: '2-digit',
-    minute: '2-digit'
+    minute: '2-digit',
   }
   supplyRandomDateTime(getDateTimeArray(context.data.items.count()), options)
   analytics('dd.MM.yyyy HH:mm', 'Random', context.data.items.count())
@@ -242,7 +241,7 @@ export function supplyDateTimeDdMmmmYyyyDdddHhMm(context) {
     year: 'numeric',
     hour: '2-digit',
     minute: '2-digit',
-    weekday: 'long'
+    weekday: 'long',
   }
   supplyOrderedDateTime(getDateTimeArray(context.data.items.count()), options)
   analytics('dd.MM.yyyy dddd HH:mm', 'Ordered', context.data.items.count())
@@ -255,7 +254,7 @@ export function supplyRandomDateTimeDdMmmmYyyyDdddHhMm(context) {
     year: 'numeric',
     hour: '2-digit',
     minute: '2-digit',
-    weekday: 'long'
+    weekday: 'long',
   }
   supplyRandomDateTime(getDateTimeArray(context.data.items.count()), options)
   analytics('dd.MM.yyyy dddd HH:mm', 'Random', context.data.items.count())

@@ -1,5 +1,5 @@
+import analytics from '@ozgurgunes/sketch-plugin-analytics'
 import { supplyData, supplyOrderedData, supplyRandomData } from './utils'
-import analytics from './analytics'
 
 import cities from './data/locationCity'
 import countries from './data/locationCountry'
@@ -74,7 +74,6 @@ export function supplyDistrictCommaCity(context) {
       return a.city.localeCompare(b.city, 'tr-TR', { sensitivity: 'base' })
     })
     .map(data => data.town + ', ' + data.city)
-
   supplyData(data)
   analytics('District, City', 'Ordered', context.data.items.count())
 }
@@ -93,7 +92,6 @@ export function supplyDistrictSlashCity(context) {
       return a.city.localeCompare(b.city, 'tr-TR', { sensitivity: 'base' })
     })
     .map(data => data.town + ' / ' + data.city)
-
   supplyData(data)
   analytics('District / City', 'Ordered', context.data.items.count())
 }

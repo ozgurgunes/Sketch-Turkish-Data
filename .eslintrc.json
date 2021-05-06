@@ -6,8 +6,7 @@
   "extends": ["eslint:recommended", "prettier", "sketch"],
   "plugins": ["prettier"],
   "globals": {
-    "context": "readonly",
-    "NSURLSession": "readonly"
+    "context": "readonly"
   },
   "parserOptions": {
     "ecmaVersion": 2018,
