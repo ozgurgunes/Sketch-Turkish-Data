@@ -2,6 +2,9 @@
 <rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
   <channel>
     <item>
+      <enclosure url="https://github.com/ozgurgunes/Sketch-Turkish-Data/releases/download/v0.3.2/turkish-data.sketchplugin.zip" sparkle:version="0.3.2"/>
+    </item>
+    <item>
       <enclosure url="https://github.com/ozgurgunes/Sketch-Turkish-Data/releases/download/v0.3.1/turkish-data.sketchplugin.zip" sparkle:version="0.3.1"/>
     </item>
     <item>
